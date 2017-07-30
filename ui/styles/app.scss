@@ -1,0 +1,508 @@
+body, html{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #2d0000;
+  outline: 1px solid slategrey;
+}
+
+#app {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+/*
+=================================
+GRID
+=================================
+*/
+
+.grid {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+} 
+
+
+/*
+=================================
+HEADER
+=================================
+*/
+
+.menu .overlay {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(76,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.menu .show {
+  height: 100%;
+}
+
+.menu .social {
+  position: fixed;
+  z-index: 20;
+  text-align: center;
+  right: 100px;
+  top: 30px;
+}
+
+.menu .social a {
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 17px;
+  display: inline-block;
+  transition: 3s;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.menu .social a i {
+  font-size: 22px;
+  color: #764c4c;
+  margin: 5px 10px;
+}
+
+.menu .overlay-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+
+.menu .overlay ul {
+  padding-top: 23%;
+}
+
+.menu .overlay li {
+  list-style: none;
+  display: inline-block;
+  padding: 15px;
+}
+
+
+.menu .overlay a {
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 20px;
+  display: inline-block;
+  transition: 3s;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.menu .overlay a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+}
+
+.menu .overlay a:hover::after {
+  width: 100%;
+}
+
+.menu .overlay li a:hover {  
+  color: white;
+}
+
+.menu .header .burger {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  right: 0px;
+  padding: 25px;
+  z-index: 20;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #c50202;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+  background-color: white;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+  background-color: white;
+}
+
+
+/*
+=================================
+WELCOME
+=================================
+*/
+
+.welcome {
+  width: 500%;
+  height: 100%;
+  font-size: 0;
+}
+
+.welcome #page1, #page2, #page3, #page4, #page5  {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.welcome #page1 {
+  background-image: url("../images/rect1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.welcome #page2 {
+  /*background-image: url("../images/slider/one.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;*/
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: #ebe5e5
+}
+
+.welcome #page2 .content {
+  width: 80%;
+  margin: 0px auto;
+  height: 100%;
+  text-align: center;
+}
+
+.welcome #page2 .content h2 {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #5d1919;
+  margin: 0px;
+  display: inline-block;
+  margin: 5% 0px;
+}
+
+.welcome #page2 .content h2 span {
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 100;
+}
+
+.welcome #page2 .content .list {
+  width: 100%;
+}
+
+.welcome #page2 .content .list .item {
+  width: 29.33%;
+  margin: 20px 2%;
+  display: inline-block;
+  text-align: center;
+  height: 200px;
+  background: #fff;
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.welcome #page2 .content .list .item h3 {
+  padding-top: 25%;
+  margin: 0px;
+  font-size: 17px;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color:  #5d1919;
+}
+
+.welcome #page2 .content .list .item p {
+  width: 80%;
+  margin: 0px 10%;
+  display: none;
+}
+
+.welcome #page2 .content .list .item:hover {
+  width: 29.33%;
+  margin: 20px 2%;
+  display: inline-block;
+  text-align: center;
+  height: 200px;
+  background: #5d1919;
+  color: white;
+  cursor: pointer;
+  color: white;
+  vertical-align: top;
+}
+
+.welcome #page2 .content .list .item:hover h3 {
+  display: none;
+}
+
+.welcome #page2 .content .list .item:hover p {
+  padding-top: 15%;
+  font-size: 14px;
+  display: inline-block;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.welcome #page3 {
+  /*background-image: url("../images/slider/one.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;*/
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: white;
+}
+
+.welcome #page3 .content {
+  width: 100%;
+  margin: 0px auto;
+  height: 100%;
+  text-align: center;
+}
+
+.welcome #page3 .content h2 {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #5d1919;
+  margin: 0px;
+  display: inline-block;
+  margin: 5% 0px;
+  position: absolute;
+}
+
+.welcome #page3 .content h2 span {
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 100;
+}
+
+.welcome #page3 .content .list {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+.welcome #page3 .content .list img {
+  width: 25%;
+  display: inline-block;
+  font-size: 0;
+  height: 50%;
+}
+
+.welcome #page4 {
+  /*background-image: url("../images/slider/one.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;*/
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: #3c0000
+}
+
+.welcome #page4 .content {
+  width: 80%;
+  margin: 0px auto;
+  height: 100%;
+  text-align: center;
+  color: #b19999;
+}
+
+.welcome #page4 .content h2 {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0px;
+  padding: 5% 0px;
+}
+
+.welcome #page4 .content h2 span {
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 100;
+}
+
+.welcome #page4 .content .col-1, .welcome #page4 .content .col-2 {
+  width: 44%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 3%;
+  text-align: left;
+}
+
+.welcome #page4 .content .col-1 h4 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.welcome #page4 .content .col-1 p {
+  font-size: 15px;
+}
+
+.welcome #page4 .content .col-2 div {
+  display: inline-block;
+  width: 40%;
+  margin: 10px 4%;
+  text-align: center;
+  border: 1px solid #4f1919;
+  background: #4f1919;
+  padding: 10px 0px;
+}
+
+.welcome #page4 .content .col-2 div i {
+  color: #d8cccc;
+  padding: 30px;
+}
+
+.welcome #page4 .content .col-2 div p {
+  width: 90%;
+  margin: 0px auto;
+  padding: 10px 0px;
+  font-size: 13px;
+}
+
+.welcome #page4 .content .col-2 div p span {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.welcome #page5 {
+  /*background-image: url("../images/slider/one.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;*/
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: #fff;
+}
+
+.welcome #page5 .content {
+  width: 100%;
+  margin: 0px auto;
+  height: 100%;
+  text-align: center;
+  color: #b19999;
+}
+
+.welcome #page5 .content .col-1, .welcome #page5 .content .col-2 {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  height: 100%;
+}
+
+.welcome #page5 .content .col-1 iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.welcome #page5 .content .col-2 .details {
+  width: 60%;
+  margin: 50px 20%;
+}
+
+.welcome #page5 .content .col-2 .details h2 {
+  font-size: 25px;
+  color: #3c0000;
+  font-weight: bold;
+}
+
+.welcome #page5 .content .col-2 .details p {
+  font-size: 15px;
+  color: #623232;
+}
+
+.welcome #page5 .content .col-2 form {
+  width: 60%;
+  margin: 20px 20%;
+}
+
+.welcome #page5 .content .col-2 form input, .welcome #page5 .content .col-2 form textarea {
+  width: 100%;
+  border: 1px solid #9d7f7f;
+  border-radius: 0px;
+  font-size: 13px;
+}
+
+.welcome #page5 .content .col-2 form button {
+  background: #4f1919;
+  border-radius: 0px;
+  border: 0px;
+  color: white;
+}
+
+.welcome #page5 .content .col-2 form input::-webkit-input-placeholder, .welcome #page5 .content .col-2 form textarea::-webkit-input-placeholder {
+  color: #9d7f7f;
+}
+
+.welcome #page5 .content .col-2 form input::-moz-placeholder, .welcome #page5 .content .col-2 form textarea::-moz-placeholder {
+  color: #9d7f7f;
+}
